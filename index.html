@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="swiper">
+            <div class="swiper-wrapper">
+                <img class="swiper-slide" src="images/1.jpg" />
+                <img class="swiper-slide" src="images/2.jpg" />
+                <img class="swiper-slide" src="images/3.jpg" />
+                <img class="swiper-slide" src="images/4.jpg" />
+                <img class="swiper-slide" src="images/5.jpg" />
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+    </div>
+
+
+    <script>
+            const swiper = new Swiper(".swiper", {
+                navigation:{
+                    prevEl: ".swiper-button-prev",
+                    nextEl: ".swiper-button-next"
+                }, 
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true
+                },
+                autoplay: {
+                    delay: 3000,
+                },
+                effect: "fade",
+            })
+    </script>
+</body>
+</html>
